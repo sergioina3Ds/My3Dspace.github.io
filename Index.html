@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3DS Video Vault</title>
+    <style>
+        body {
+            background-color: #000; /* Black bg for 3DS screens */
+            color: #fff; /* White text for contrast */
+            font-family: sans-serif; /* Basic font, no custom loads */
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+            font-size: 18px; /* Large for 3DS readability */
+        }
+        h1 {
+            margin-bottom: 10px;
+        }
+        video {
+            width: 400px; /* Matches 3DS top screen width */
+            height: 240px; /* Matches 3DS top screen height */
+            background-color: #111; /* Slight gray for loading */
+            border: 2px solid #fff; /* Visible border on small screen */
+        }
+        p {
+            max-width: 400px;
+            margin: 10px auto;
+            line-height: 1.4;
+        }
+        /* Bottom screen touch-friendly: Larger tap areas if needed */
+        @media (max-width: 320px) { /* For bottom screen fallback */
+            video { width: 100%; height: auto; }
+        }
+    </style>
+</head>
+<body>
+    <h1>🎮 3DS Video Vault</h1>
+    <p>Lightweight video host for New 3DS XL. Tap or press A to play!</p>
+    
+    <video controls preload="metadata" poster="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8/5+hHgAHggJ/PchI7wAAAABJRU5ErkJggg==">
+        <source src="https://test-videos.co.uk/vids/bigbuckbunny/mp4/h264/360/Big_Buck_Bunny_360_10s_1MB.mp4" type="video/mp4">
+        Your browser doesn't support video playback. (But 3DS does!)
+    </video>
+    
+    <p>A short bunny adventure—optimized for your 3DS. Add more &lt;video&gt; tags below for a playlist!</p>
+</body>
+</html>
